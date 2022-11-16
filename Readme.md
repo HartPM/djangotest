@@ -14,6 +14,17 @@
     - to start on a different port: 
         - $ python3 manage.py runserver 9000
 
+- Install Django Debug Toolbar
+    - $ pipenv install django-debug-toolbar
+    - add 'debug_toolbar' to INSTALLED_APPS in settings.py
+        - import debug_toolbar 
+    - add 'debug_toolbar.middleware.DebugToolbarMiddleware' to middleware in settings.py
+    - add the following to settings.py for local development
+        - INTERNAL_IPS = [
+            '127.0.0.1',
+        ]
+
+
 - create a new app
     - python3 manage.py startapp playground
 - add the new app to the list of INSTALLED_APPS in settings.py
